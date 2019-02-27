@@ -351,6 +351,35 @@ module.exports = function (RED) {
     }
     /* end read from PLC */
 
+    /* multiread from PLC */
+    node.multiread = function(n, config, cb) {
+      debug('multiread:',n.id, n.type)
+      if (node.system.connectState == adsHelpers.connectState.CONNECTED) {
+        var handles = new Array()
+        
+        for (var i = 0; i < config.length; i++) {
+          var handle = {
+            symname: config[i].varName,
+            bytename: nodeads[config[i].adstype],
+            propname: 'value'
+          }
+          handles.push(handle)
+        }
+                
+        if (node.adsClient) {
+          debug('multiread:',handles)
+          node.adsClient.multiRead(handles, function(err, handles) {
+            if (err) {
+              node.error(util.format('Ads multiread %s', err))
+            } else {
+              cb(handles)
+            }
+          })
+        }
+      }
+    }
+    /* end multiread from PLC */
+
     /* node RIP */
     node.on('close', function (done) {
       debug('close:')

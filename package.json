@@ -1,7 +1,7 @@
 {
-  "name": "node-red-contrib-ads",
-  "version": "1.1.16",
-  "description": "Provides nodes to talk to Beckhoff TwinCAT PLC variables over ADS",
+  "name": "node-red-contrib-ads-multi",
+  "version": "1.1.17",
+  "description": "Provides nodes to talk to Beckhoff TwinCAT PLC variables over ADS - Modified by Esben Lorenzen to support multiRead function of node-ads",
   "license": "MIT",
   "dependencies": {
     "node-ads-api": "^1.4.7"
@@ -27,6 +27,7 @@
     "nodes": {
       "ads-notification": "ads-notification.js",
       "ads-in": "ads-in.js",
+      "ads-multiin": "ads-multiin.js",
       "ads-out": "ads-out.js",
       "ads-system": "ads-system.js",
       "ads-symbols": "ads-symbols.js",

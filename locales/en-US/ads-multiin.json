@@ -1,0 +1,48 @@
+{
+  "ads-multiin": {
+      "label": {
+          "datasource": "Datasource",
+          "varName": "variable name",
+          "varTyp": "variable type",
+          "varSize": "size in byte",
+          "timezone": "timezone",
+          "inValue": "property",
+          "useInputMsg": "add property to incoming msg",
+          "topic": "topic"
+      },
+      "placeholder": {
+          "varName": ".var",
+          "varSize": "bytes",
+          "inValue": "payload",
+          "topic": "enter a topic"
+      },
+      "varTyp": {
+        "BOOL": "BOOL",
+        "BYTE": "BYTE",
+        "WORD": "WORD",
+        "DWORD": "DWORD",
+        "SINT": "SINT",
+        "USINT": "USINT",
+        "INT": "INT",
+        "UINT": "UINT",
+        "DINT": "DINT",
+        "UDINT": "UDINT",
+        "LINT": "LINT",
+        "ULINT": "ULINT",
+        "REAL": "REAL",
+        "LREAL": "LREAL",
+        "TIME": "TIME",
+        "TIME_OF_DAY": "TIME_OF_DAY",
+        "TOD": "TOD",
+        "DATE": "DATE",
+        "DATE_AND_TIME": "DATE_AND_TIME",
+        "DT": "DT",
+        "STRING": "STRING",
+        "RAW": "RAW"
+      },
+      "timezone": {
+        "UNCHANGED": "unchanged",
+        "TO_LOCAL": "convert to local timezone"
+      } 
+    }
+}
